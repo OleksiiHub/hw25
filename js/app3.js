@@ -1,13 +1,21 @@
-const calculate = {
-    ask: {
-        numFirst: +prompt('First Number'),
-        numSecond: +prompt('Second Number')
+
+
+let calculator = {
+  
+    a:"", 
+    b:"",
+    ask(){
+      this.a=+prompt("Enter a");
+      this.b=+prompt("Enter b:");
     },
-    sum: function (numFirst, numSecond) {
-        return `${this.numFirst + this.numSecond}`;
+    sum(){
+      return this.a+this.b;
     },
-    mul: function() {
-        return `${this.numFirst * this.numSecond}`;
-    }
-}
+    mul(){
+      return this.a*this.b;
+    },
+  };
+  calculator.ask();
+  alert(calculator.sum());
+  alert(calculator.mul());
 
